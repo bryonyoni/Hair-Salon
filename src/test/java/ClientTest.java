@@ -71,9 +71,9 @@ public class ClientTest{
 
   @Test
   public void find_returnsClientWithCorrespondingId_secondClient() {
-    Client firstClient = new Client("Mow the lawn",1);
+    Client firstClient = new Client("name","image","email");
     firstClient.save();
-    Client secondClient = new Client("Buy groceries",1);
+    Client secondClient = new Client("name","image","email");
     secondClient.save();
     assertEquals(Client.find(secondClient.getId()), secondClient);
   }
