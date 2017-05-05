@@ -28,8 +28,8 @@ You will need the following things properly installed on your computer:
 * You can then set up your remote database using the following:
 `CREATE DATABASE hair-salon;`
 `\c hair-salon;`
-`CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);`
-`CREATE TABLE clients (id serial PRIMARY KEY, description varchar, stylistsyId int);`
+`CREATE TABLE stylists (id serial PRIMARY KEY, name varchar, email varchar, image varchar);`
+`CREATE TABLE clients (id serial PRIMARY KEY, name varchar, email varchar, image varchar, stylistId int);`
 
 
 **NOTE:** When creating the database,if you have already created a test database, it's important to delete the old test database when you create or alter a new one.
