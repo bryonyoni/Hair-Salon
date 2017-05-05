@@ -6,7 +6,7 @@ public class DatabaseRule extends ExternalResource{
 
   @Before
   public void setUp() {
-    DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/hair_salon_test", "postgres", "trave1mate");
+    DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/hair_salons_test", "postgres", "trave1mate");
   }
 
   @After

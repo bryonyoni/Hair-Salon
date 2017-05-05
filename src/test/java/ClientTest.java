@@ -31,11 +31,43 @@ public class ClientTest{
     assertEquals("email",myClient.getEmail());
   }
 
+  //
+
   @Test
   public void all_returnsAllInstancesOfClients_true(){
-
+    Client myClient = new Client("name","image","email");
+    myClient.save();
+    Client myOtherClient = new Client("name","image","email");
+    myOtherClient.save();
+    assertEquals(true,Client.all().get(0).equals(myClient));
+    assertEquals(true,Client.all().get(1).equals(myOtherClient));
   }
 
+//
+
+  @Test
+  public void save_savesAnObjectAndAssignsItAnId_0(){
+    Client myClient = new Client("name","image","email");
+    myClient.save();
+    Client savedClient = Client.all().get(0);
+    assertEquals(0,savedClient.getId());
+  }
+
+
+
+  @Test
+  public void save_savesClientIntoDB_true(){
+    Client myClient = new Client("name","image","email");
+    myClient.save();
+    assertTrue(Client.all().get(0).equals(myClient));
+  }
+
+  @Test
+  public void getId_ClientInstantiatesWithAnID() {
+    Client myClient = new Client("name","image","email");
+    myClient.save();
+    assertTrue(myClient.getId() > 0);
+  }
 
 
 }

@@ -10,22 +10,24 @@ public class Client{
   private int id;
 
 
- // @Override
- //  public boolean equals(Object otherClients) {
- //  if (!(otherClients instanceof Clients)) {
- //  return false;
- //  } else {
- //    Clients newClients = (Clients) otherClients;
- //     return this.getName().equals(newClients.getName()) &&
- //     this.getId() == newClients.getId();
- //    }
- //  }
 
-  public Client(String name, String image,String email, int ){
+ @Override
+  public boolean equals(Object otherClients) {
+  if (!(otherClients instanceof Client)) {
+  return false;
+  } else {
+    Client newClient = (Client) otherClients;
+     return this.getName().equals(newClient.getName()) &&
+     this.getEmail().equals(newClient.getEmail()) &&
+     this.getImage().equals(newClient.getImage());
+    }
+  }
+
+  public Client(String name, String image,String email ){
     this.name = name;
     this.email = email;
     this.image = image;
-    this.stylistId = stylistId;
+
   }
 
   public String getName(){
@@ -42,6 +44,27 @@ public class Client{
 
   public int getId(){
     return id;
+  }
+
+
+  public static List<Client> all(){
+    String sql = "SELECT name,image,email FROM clients";
+    try(Connection con = DB.sql2o.open()){
+      return con.createQuery(sql).executeAndFetch(Client.class);
+    }
+  }
+
+  public void save(){
+    try(Connection con = DB.sql2o.open()){
+      String sql = "INSERT INTO clients (name,image,email) VALUES (:name,:image,:email)";
+      this.id = (int)con
+      .createQuery(sql,true)
+      .addParameter("name",this.name)
+      .addParameter("image",this.image)
+      .addParameter("email",this.email)
+      .executeUpdate()
+      .getKey();
+    }
   }
 
 
