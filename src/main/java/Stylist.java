@@ -3,8 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 import org.sql2o.*;
 
-public class Stylists{
-
+public class Stylist{
+  private String name;
+  private String email;
+  private String image;
+  private int id;
 
 
  // @Override
