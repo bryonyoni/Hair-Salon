@@ -69,5 +69,14 @@ public class ClientTest{
     assertTrue(myClient.getId() > 0);
   }
 
+  @Test
+  public void find_returnsClientWithCorrespondingId_secondClient() {
+    Client firstClient = new Client("Mow the lawn",1);
+    firstClient.save();
+    Client secondClient = new Client("Buy groceries",1);
+    secondClient.save();
+    assertEquals(Client.find(secondClient.getId()), secondClient);
+  }
+
 
 }
