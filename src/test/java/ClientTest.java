@@ -82,7 +82,7 @@ public class ClientTest{
     public void update_updatesClientName_true() {
     Client myClient = new Client("name","image","email");
     myClient.save();
-    myClient.update("name2","image","email");
+    myClient.update("name2");
     assertEquals("name2", Client.find(myClient.getId()).getName());
   }
 
