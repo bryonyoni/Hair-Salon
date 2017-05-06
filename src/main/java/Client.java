@@ -8,6 +8,7 @@ public class Client{
   private String email;
   private String image;
   private int id;
+  private int stylistId;
 
 
 
@@ -23,11 +24,11 @@ public class Client{
     }
   }
 
-  public Client(String name, String image,String email ){
+  public Client(String name, String image,String email,  int stylistId){
     this.name = name;
     this.email = email;
     this.image = image;
-
+    this.stylistId = stylistId;
   }
 
   public String getName(){
@@ -46,9 +47,13 @@ public class Client{
     return id;
   }
 
+  public int getStylistId(){
+    return stylistId;
+  }
+
 
   public static List<Client> all(){
-    String sql = "SELECT name,image,email FROM clients";
+    String sql = "SELECT name,image,email,stylistId FROM clients";
     try(Connection con = DB.sql2o.open()){
       return con.createQuery(sql).executeAndFetch(Client.class);
     }
@@ -56,12 +61,13 @@ public class Client{
 
   public void save(){
     try(Connection con = DB.sql2o.open()){
-      String sql = "INSERT INTO clients (name,image,email) VALUES (:name,:image,:email)";
+      String sql = "INSERT INTO clients (name,image,email,stylistId) VALUES (:name,:image,:email,:stylistId)";
       this.id = (int)con
       .createQuery(sql,true)
       .addParameter("name",this.name)
       .addParameter("image",this.image)
       .addParameter("email",this.email)
+      .addParameter("stylistId",this.stylistId)
       .executeUpdate()
       .getKey();
     }
