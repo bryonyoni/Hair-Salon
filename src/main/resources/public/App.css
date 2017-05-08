@@ -1,0 +1,45 @@
+body{
+background-color: #FBFBFB;
+}
+
+#logoname{
+  font-family: 'Dancing Script', cursive;
+  font-size: 180%;
+  padding-top: 1.7%;
+}
+#topbuttons{
+  padding-top: 1%;
+  padding-left: 5%;
+}
+
+#header{
+  color:#D5D5D5;
+  background-image: url('images/img1.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*height: 3000%;*/
+  padding-top: 11%;
+  padding-bottom: 11%;
+}
+
+#thename{
+  float: right;
+  font-size: 300%;
+  padding-right: 5%;
+  padding-top: 7.5%;
+  padding-bottom: 5%;
+  font-family: 'Pacifico', cursive;
+  /*margin-bottom: 5%;*/
+}
+
+#maintext{
+  float: left;
+  width: 60%;
+  border-left: 1px solid #D5D5D5;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: 'Poppins', sans-serif;
+  /*margin-bottom: 5%;*/
+}
