@@ -2,6 +2,10 @@ body{
 background-color: #FBFBFB;
 }
 
+#navbartop{
+  background-color: white;
+}
+
 #logoname{
   font-family: 'Dancing Script', cursive;
   font-size: 180%;
@@ -9,7 +13,7 @@ background-color: #FBFBFB;
 }
 #topbuttons{
   padding-top: 1%;
-  padding-left: 5%;
+  padding-left: 15%;
 }
 
 #header{
@@ -41,5 +45,62 @@ background-color: #FBFBFB;
   padding-top: 5%;
   padding-bottom: 5%;
   font-family: 'Poppins', sans-serif;
-  /*margin-bottom: 5%;*/
+}
+
+#mission{
+  text-align: center;
+  color:#3D3D3D;
+  background-color: white;
+  padding-top: 3%;
+}
+
+
+#mission img{
+  float: left;
+  padding-left: 7%;
+}
+
+#missionheader{
+  font-family: 'Pacifico', cursive;
+  font-size: 320%;
+  padding-bottom: 5%;
+}
+
+#missioncontent1{
+  font-family: 'Satisfy', cursive;
+  width: 90%;
+  font-size: 240%;
+  float: right;
+  padding-right: 7%;
+}
+
+#middlequote{
+  background-color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-bottom: 3%;
+}
+
+#signup{
+  padding-top: 3%;
+  background-color: white;
+  text-align: center;
+}
+
+#signupheader{
+  font-family: 'Pacifico', cursive;
+  font-size: 320%;
+  padding-bottom: 5%;
+}
+
+#signup img{
+  float: left;
+  padding-right: 7%;
+}
+
+#signupcontent{
+  font-family: 'Poppins', cursive;
+  float: right;
+  font-size: 240%;
+
 }
