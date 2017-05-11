@@ -4,7 +4,7 @@
   <br>
   #foreach($stylist in $stylists)
     <div class=" gallery">
-      <a href="#">
+      <a href="/stylists/$stylist.getId()">
         <img src="$stylist.getImage()" alt="stylistimage" width="25%" height="12.5%" >
         <div class="desc">$stylist.getName()</div>
       </a>
