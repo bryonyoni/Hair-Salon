@@ -1,0 +1,13 @@
+<div class="container" id="stylistslayout">
+  <h1>Stylists</h1>
+  <br>
+  #foreach($stylist in $stylists)
+
+  <!-- <div class="well"> -->
+    <p>$stylist.getName()</p>
+  <!-- </div> -->
+
+  #end
+  <br>
+  <a href="/"><button type="button" name="button" class="btn btn-default">back home</button></a>
+</div>
