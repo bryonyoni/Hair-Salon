@@ -1,13 +1,16 @@
+
 <div class="container" id="stylistslayout">
   <h1>Stylists</h1>
   <br>
   #foreach($stylist in $stylists)
-
-  <!-- <div class="well"> -->
-    <p>$stylist.getName()</p>
-  <!-- </div> -->
-
+    <div class=" gallery">
+      <a href="#">
+        <img src="$stylist.getImage()" alt="stylistimage" width="25%" height="12.5%" >
+        <div class="desc">$stylist.getName()</div>
+      </a>
+    </div>
   #end
-  <br>
-  <a href="/"><button type="button" name="button" class="btn btn-default">back home</button></a>
+    <br>
+  <a href="/stylists/new"><button id="topbuttonin" type="button" name="button" class="btn btn-default">Sign up</button></a>
+
 </div>

@@ -104,3 +104,36 @@ background-color: #FBFBFB;
   font-size: 240%;
 
 }
+
+div.gallery {
+    margin: 1%;
+    border: 1px solid #ccc;
+    float: left;
+    width:25%;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: inherit;
+}
+
+div.desc {
+    padding: 7%;
+    text-align: center;
+}
+
+#stylistslayout{
+  background-color: white;
+}
+
+#stylistslayout h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 320%;
+  text-align: center;
+  border-top: 1px solid #F9F8F8;
+
+}
